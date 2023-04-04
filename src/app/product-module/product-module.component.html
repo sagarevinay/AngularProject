@@ -10,7 +10,7 @@
 
   <label>
     Description:
-    <textarea formControlName="description" required></textarea>
+    <input type="text" formControlName="description" required>
     <div style="color:red; margin-top: 5px;" *ngIf="productForm.controls['description'].errors?.['required']">
       <span>Product Description is required</span>
   </div>
@@ -59,7 +59,7 @@
 
   <label>
     Image URL:
-    <input type="url" formControlName="image" required>
+    <input type="text" formControlName="image" required>
     <div style="color:red; margin-top: 5px;" *ngIf="productForm.controls['image'].errors?.['required']">
       <span>Product Image URL is required</span>
   </div>
@@ -87,7 +87,7 @@
       <input type="text" [(ngModel)]="p.name" name="name" [disabled]="!p.editing" />
     </td>
     <td>
-      <input type="text" [(ngModel)]="p.dscription" name="desc" [disabled]="!p.editing" />
+      <input type="text" [(ngModel)]="p.description" name="desc" [disabled]="!p.editing" />
     </td>
     <td>
       <input type="text" [(ngModel)]="p.price" name="price" [disabled]="!p.editing" />
@@ -102,7 +102,7 @@
       <input type="text" [(ngModel)]="p.manufacturer" name="manf" [disabled]="!p.editing" />
     </td>
     <td>
-      <input type="text" [(ngModel)]="p.imageURL" name="img" [disabled]="!p.editing" />
+      <input type="text" [(ngModel)]="p.image" name="img" [disabled]="!p.editing" />
     </td>
     <td>
       <button (click)="editProduct(p)">Edit</button>

@@ -1,17 +1,26 @@
 {
   "getProductData": [
     {
-      "name": "samsung Tv 4K",
+      "name": "One plus 9R",
+      "description": "oneplus mobile00",
+      "price": "50000",
+      "quantity": "10000",
+      "category": "Electronics",
+      "manufacturer": "Gada Electronics",
+      "image": "www.Gada_Electronics.com",
+      "id": 3,
+      "editing": true
+    },
+    {
+      "name": "RamSung TV",
       "description": "TV",
-      "price": 30000,
-      "quantity": 3,
+      "price": 40000,
+      "quantity": "5000",
       "category": "electronics",
       "manufacturer": "Gada Electronics",
-      "image": "gada_electronics.com",
-      "id": 1,
-      "editing": true,
-      "dscription": "tv",
-      "imageURL": "asdas"
+      "image": "www.Gada_Electronics.com",
+      "id": 4,
+      "editing": true
     }
   ]
 }

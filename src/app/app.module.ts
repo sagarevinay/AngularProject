@@ -9,7 +9,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { ProductModuleComponent } from './product-module/product-module.component';
 import { SupplierModuleComponent } from './supplier-module/supplier-module.component';
 import { OrderModuleComponent } from './order-module/order-module.component';
-import { ProductServiceService } from './product-service.service';
+import { ProductServiceService } from './services/product-service.service';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';

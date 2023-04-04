@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ProductServiceService } from '../product-service.service';
+import { ProductServiceService } from '../services/product-service.service';
 import { HttpClient } from '@angular/common/http';
 import {Product} from '../productforms/Product';
 
@@ -42,7 +42,7 @@ export class ProductModuleComponent implements OnInit  {
     if (this.productForm.valid) {
       console.log(this.productForm.value);
       this.ser.Save(this.productForm.value).subscribe();
-      //window.location.reload();
+      window.location.reload();
     }
   }
 
