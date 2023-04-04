@@ -1,0 +1,17 @@
+{
+  "getProductData": [
+    {
+      "name": "samsung Tv 4K",
+      "description": "TV",
+      "price": 30000,
+      "quantity": 3,
+      "category": "electronics",
+      "manufacturer": "Gada Electronics",
+      "image": "gada_electronics.com",
+      "id": 1,
+      "editing": true,
+      "dscription": "tv",
+      "imageURL": "asdas"
+    }
+  ]
+}
