@@ -37,3 +37,25 @@ form {
       inset 4px 4px 6px 0 rgba(212, 45, 45, 0.4);
   }
   
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 2px solid #e34545;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #e58a8a;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f8e3e3;
+  }
+  
+  td:last-child {
+    text-align: center;
+  }

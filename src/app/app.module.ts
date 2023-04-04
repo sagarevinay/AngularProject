@@ -13,6 +13,7 @@ import { ProductServiceService } from './services/product-service.service';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
     FormsModule,ReactiveFormsModule,HttpClientModule
   ],
   providers: [],

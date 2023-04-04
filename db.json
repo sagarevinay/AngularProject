@@ -21,6 +21,16 @@
       "image": "www.Gada_Electronics.com",
       "id": 4,
       "editing": true
+    },
+    {
+      "name": "Raymond suit",
+      "description": "suit",
+      "price": 15000,
+      "quantity": 1,
+      "category": "clothing",
+      "manufacturer": "Raymond",
+      "image": "Raymond.com",
+      "id": 5
     }
   ]
 }
