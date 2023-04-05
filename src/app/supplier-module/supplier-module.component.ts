@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SupplierService } from '../services/supplier.service';
 import { HttpClient } from '@angular/common/http';
 import {Supplier} from '../productforms/Supplier';
+import * as html2pdf from 'html2pdf.js';
 
 @Component({
   selector: 'app-supplier-module',
@@ -14,7 +15,8 @@ export class SupplierModuleComponent  implements OnInit {
   supser!:Supplier[];
   supplierForm: FormGroup= new FormGroup({});
 
-  constructor(private fb: FormBuilder, private ser:SupplierService,private http: HttpClient) { }
+  constructor(private fb: FormBuilder, private ser:SupplierService,private http: HttpClient,
+     ) { }
 
   ngOnInit(): void {
     this.supplierForm = this.fb.group({
@@ -65,5 +67,17 @@ export class SupplierModuleComponent  implements OnInit {
       this.supser = data;
     });
     window.location.reload();
+  }
+  
+
+  supplierReport(){
+    const element = document.querySelector('table');
+  const options = {
+    filename: 'table.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+  };
+  html2pdf().from(element).set(options).save();
   }
 }

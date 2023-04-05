@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProductServiceService } from '../services/product-service.service';
 import { HttpClient } from '@angular/common/http';
 import {Product} from '../productforms/Product';
+import * as html2pdf from 'html2pdf.js';
 
 @Component({
   selector: 'app-product-module',
@@ -65,6 +66,17 @@ export class ProductModuleComponent implements OnInit  {
       this.prodser = data;
     });
     window.location.reload();
+  }
+
+  ProductReport(){
+    const element = document.querySelector('table');
+  const options = {
+    filename: 'table.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+  };
+  html2pdf().from(element).set(options).save();
   }
 
 }

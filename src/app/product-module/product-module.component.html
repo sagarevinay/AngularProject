@@ -70,6 +70,7 @@
 </form>
 
 <br>
+<button style="height: 40px;" (click)="ProductReport()">Generate Report</button>
 <table border="1">
   <tr>
     <th>Name</th>
@@ -82,6 +83,7 @@
     <th>Data Operations</th>
   </tr>
 
+  
   <tr *ngFor="let p of prodser">
     <td>
       <input type="text" [(ngModel)]="p.name" name="name" [disabled]="!p.editing" />
